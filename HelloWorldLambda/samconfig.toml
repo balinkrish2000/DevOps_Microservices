@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "mylambdastack1"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1fubnzz3otxm2"
+s3_prefix = "mylambdastack1"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["HelloWorldFunction=724333931337.dkr.ecr.us-east-1.amazonaws.com/mylambdastack111afe2c9/helloworldfunction19d43fc4repo"]
