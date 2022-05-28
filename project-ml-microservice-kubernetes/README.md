@@ -65,13 +65,13 @@ source .devops/bin/activate
 
 ### Instructions on running
 
-*Create virtual environment using 'python3 -m venv ~/.devops && source ~/.devops/bin/activate'
-*'make install' to install all requirements to run the flask app locally
-*'make lint' to lint the flask app and the docker file
-*'./run_docker.sh' to create a local docker container with the image of the app (name 'api')
-*'./make_prediction.sh' to run the prediction using the local docker container
-*'./upload_docker.sh' to push the local docker image to docker hub
-*'minikube start' to start the local kubernetes cluster
-*'./run_kubernetes.sh' to push the api image from docker hub to the local kubernetes pod
-*'./make_prediction.sh' to run the prediction using the image in local kubernetes pod
+* Create virtual environment using 'python3 -m venv ~/.devops && source ~/.devops/bin/activate'
+* 'make install' to install all requirements to run the flask app locally
+* 'make lint' to lint the flask app and the docker file
+* './run_docker.sh' to create a local docker container with the image of the app (name 'api')
+* './make_prediction.sh' to run the prediction using the local docker container
+* './upload_docker.sh' to push the local docker image to docker hub
+* 'minikube start' to start the local kubernetes cluster
+* './run_kubernetes.sh' to push the api image from docker hub to the local kubernetes pod
+* './make_prediction.sh' to run the prediction using the image in local kubernetes pod
 
