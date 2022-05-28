@@ -1,5 +1,7 @@
 <include a CircleCI status badge, here>
 
+[![CircleCI](https://circleci.com/gh/balinkrish2000/DevOps_Microservices/tree/master.svg?style=svg)](https://circleci.com/gh/balinkrish2000/DevOps_Microservices/tree/master)
+
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
@@ -25,7 +27,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ## Setup the Environment
 
-* Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
+* Create a virtualenv with Python 3.7 and activate it.
 ```bash
 python3 -m pip install --user virtualenv
 # You should have Python 3.7 available in your host. 
@@ -48,3 +50,28 @@ source .devops/bin/activate
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+
+### Files in the Repository
+
+* app.py|main flask app containing the ml housing loan prediction application
+* Dockerfile|contains the steps to configure the docker image
+* Makefile|To run make commands locally
+* requirements|consists all the requirements that should be installed for the app to run
+* run_docker|For building and running the container locally
+* upload_docker|To push the container to docker hub
+* run_kubernetes|To push the docker image to a local kubernetes pod
+* make_prediction|To run the flask app to make ml predictions
+
+### Instructions on running
+
+*Create virtual environment using 'python3 -m venv ~/.devops && source ~/.devops/bin/activate'
+*'make install' to install all requirements to run the flask app locally
+*'make lint' to lint the flask app and the docker file
+*'./run_docker.sh' to create a local docker container with the image of the app (name 'api')
+*'./make_prediction.sh' to run the prediction using the local docker container
+*'./upload_docker.sh' to push the local docker image to docker hub
+*'minikube start' to start the local kubernetes cluster
+*'./run_kubernetes.sh' to push the api image from docker hub to the local kubernetes pod
+*'./make_prediction.sh' to run the prediction using the image in local kubernetes pod
+
